@@ -1,4 +1,4 @@
-//ÖĞÖµÂË²¨
+//ä¸­å€¼æ»¤æ³¢
 #define _CRT_SECURE_NO_WARNINGS
 #include<stdio.h>
 
@@ -12,7 +12,7 @@ int main4()
 	{
 		scanf("%d", &n);
 
-		//Ğ´Èë´ı´¦ÀíĞòÁĞ
+		//å†™å…¥å¾…å¤„ç†åºåˆ—
 		int arr[1000] = { 0 };
 		int result[1000] = { 0 };
 		for(int i = 0; i < n; i++)
@@ -21,14 +21,14 @@ int main4()
 			result[i] = arr[i];
 		}
 
-		//´íÎóÅĞ¶Ï
+		//é”™è¯¯åˆ¤æ–­
 		if (w % 2 == 0||w>n)
 		{
 			printf("ERROR\n");
 			continue;
 		}
 
-		//È¡³ö´°¿Ú,ÔÚ´°¿ÚÄÚÅÅĞò
+		//å–å‡ºçª—å£,åœ¨çª—å£å†…æ’åº
 		int window[1000] = { 0 };
 		for (int i = 0; i < n - w+1; i++)
 		{
@@ -42,7 +42,7 @@ int main4()
 		}
 
 
-		//Êä³ö½á¹ûÊı×é
+		//è¾“å‡ºç»“æœæ•°ç»„
 		for (int i = 0; i < n; i++)
 		{
 			printf("%d ", result[i]);
@@ -56,7 +56,7 @@ int main4()
 	return 0;
 }
 
-int bubble_sort(int window[], int w)//ÅÅĞò²¢·µ»ØÖĞÖµ
+int bubble_sort(int window[], int w)//æ’åºå¹¶è¿”å›ä¸­å€¼
 {
 	int temp;
 	for (int i = 0; i < w - 1; i++)
@@ -71,5 +71,5 @@ int bubble_sort(int window[], int w)//ÅÅĞò²¢·µ»ØÖĞÖµ
 			}
 		}
 	}
-	return window[w / 2];
+	return window[w / 2];//???
 }
